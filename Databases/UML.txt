@@ -1,0 +1,10 @@
+Class Diagram:
+Customer,Order,SpecialOrder,NormalOrder are the classes in the Project. The SpecialOrder and NormalOrder extends Order class i.e. the special order and normal order are different types of orders. Each customer can place many orders. Each order can be confirmed or closed using confirm() and close() methods of Order Class. The customer can send orders using sendOrder() and recive orders using receiveOrder(). NormalOrder class implements dispatch() and receive() while SpecialOrder() implements only dispatch() method.
+Sequence Diagram:
+The Customer object is initialized; if sendOrder() call is sent then order object is intialized; if  confirmed using confirm() method call of either SpecilaOrder or NormalOrder classes. After the confirmation and returning of the call, the customer object takes further actions.
+Use Case Diagram:
+The customer is capable of placing order, the order extends SpecialOrder and NormalOrder classes. The Order class is parent class of SpecialOrder and NormalOrder classes.
+Activity Diagram:
+The customer initially sends an order request and order system generates the receipt of the order. If its a normal order, then the order is confirmed and dispatched.If not then it is checked if its a special order, if it is it is confirmed and then dispatched.
+
+
