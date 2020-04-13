@@ -1,0 +1,15 @@
+Mongo Shell Commands:
+use mongotest
+db.createCollection("Employee")
+db.Employee.insertMany([json-structured-employee-db])
+db.Employee.find()
+db.Employee.find({},{"emp_id":1,"fname":1})
+db.Employee.find({},{"_id":0})
+db.Employee.find().limit(5)
+db.Employee.find().skip(5).limit(5)
+db.Employee.find({"city":"Guragon"})
+db.Employee.find({"salary.0":{$lt:20000}})
+db.Employee.find({"salary.0":{$lt:20000},"city":"Guragon"})
+var sal = 0;db.Employee.find({"salary.0":{$lt:20000}}).forEach((doc) => sal += doc.salary[0]);sal
+db.Employee.find({"city":"Guragon"}).count()
+
