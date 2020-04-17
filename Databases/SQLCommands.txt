@@ -1,0 +1,45 @@
+1. SELECT modulecode,duration FROM MODULES WHERE duration < 6
+2. SELECT batchcode,trainers.trainerid,coursecode,startdate,capacity,batchstrength FROM trainers INNER JOIN batches ON trainers.trainerid = batches.trainerid
+WHERE trainers.trainername = 'KRISHNAN';
+3. SELECT courses.title FROM courseandmodules
+INNER JOIN courses
+ON courseandmodules.coursecode = courses.coursecode
+WHERE courseandmodules.coursecode=100
+4.SELECT courses.coursecode,courses.title FROM courseandmodules
+INNER JOIN courses
+ON courseandmodules.coursecode = courses.coursecode
+WHERE courseandmodules.coursecode=100
+5.SELECT COUNT(*) AS NumberofModules FROM courseandmodules
+WHERE coursecode=100
+6. SELECT coursecode,count(*) AS NumberofModules FROM courseandmodules
+GROUP BY coursecode
+7. SELECT title,fees FROM courses
+WHERE fees=(SELECT MAX(fees) FROM courses)
+8. SELECT * FROM students
+WHERE batchcode = 3001
+9. SELECT * FROM students
+WHERE place = 'CHENNAI'
+10. SELECT COUNT(*) as LessThanSixDays FROM modules
+WHERE duration<6
+11. select batchcode,title,to_char(startdate,'mm-yy') as startdate from batches
+inner join courses
+on batches.coursecode = courses.coursecode
+where extract(YEAR FROM startdate)=2012 and 
+extract(MONTH FROM startdate)=5
+12. select courses.coursecode,courses.title,courses.fees from batches
+inner join courses
+on batches.coursecode = courses.coursecode
+where extract(YEAR FROM startdate)=2012 and 
+extract(MONTH FROM startdate)=1
+13. select modules.modulename from modules
+inner join courseandmodules on modules.modulecode = courseandmodules.modulecode
+inner join courses on courses.coursecode = courseandmodules.coursecode
+where courses.title='Oracle DBA'
+14. select students.studentid,students.studentname,batches.batchcode,place,phone from students
+inner join batches
+on batches.batchcode=students.batchcode
+where place='CHENNAI'and extract(YEAR FROM startdate)=2012
+15. select students.studentid,students.studentname from students
+inner join batches
+on batches.batchcode=students.batchcode
+where batches.coursecode = 200
