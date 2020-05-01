@@ -11,30 +11,12 @@ public class Arithmetic {
 		int num2 = sc.nextInt();
 		System.out.println("Enter 1 for Add, 2 for Sub, 3 for Mul, 4 for Div: ");
 		int op  = sc.nextInt();
-		Num_Process add = (int a,int b ) -> a+b;
-		Num_Process sub = (int a,int b ) -> a-b;
-		Num_Process mul = (int a,int b ) -> a*b;
-		Num_Process div = (int a,int b ) -> a/b;
-		switch(op) {
-		case 1:{
-			System.out.println("Result: "+add.cal(num1,num2));
-			break;
-		}
-		case 2:{System.out.println("Result: "+sub.cal(num1,num2));
-			break;
-		}
-		case 3:{
-			System.out.println("Result: "+mul.cal(num1,num2));
-			break;
-		}
-		case 4:{
-			System.out.println("Result: "+div.cal(num1,num2));
-			break;
-		}
-		default:{
-			System.out.println("Invalid Choice...");
-		}
-		}
+		Num_Process[] num_process = new Num_Process[4];
+		num_process[0] = (a,b ) -> a+b;
+		num_process[1] = (a,b) -> a-b;
+		num_process[2] = (a,b ) -> a*b;
+		num_process[3] = (a,b ) -> a/b;
+		System.out.println(num_process[op-1].cal(num1, num2));
 		sc.close();
 	}
 
