@@ -1,0 +1,14 @@
+div{
+	border:1px dotted black;
+	margin-top: 5%;
+	margin-left:35%;
+	margin-right: 35%;
+	padding-left: 2%;
+}
+form,h3{
+	margin-left:40%;
+	margin-right: 35%;
+}
+h3{
+	margin-left: 45%;
+}

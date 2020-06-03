@@ -1,0 +1,13 @@
+package com.sapient.welcome;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringWelcomeManualApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringWelcomeManualApplication.class, args);
+	}
+
+}
