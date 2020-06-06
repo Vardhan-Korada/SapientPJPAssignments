@@ -1,0 +1,21 @@
+body{
+    padding: 5px;
+    margin: 5px;
+}
+#block{
+    background-color: black;
+    border: 5px solid blue;
+}
+.customBtn{
+    background-color: rgb(52, 134, 235);
+    color: white;
+    margin-left:6%;
+    margin-bottom: 3%;
+    font-size: large;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .btn, .btn-group {
+        width:25%;
+    }
+}

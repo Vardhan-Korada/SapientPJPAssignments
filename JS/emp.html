@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A basic website template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Employee Data</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="js/script2.js" async defer></script>
+    </head>
+    <body>
+        <p class="h3 ml-2">Get Employee Data</p>
+        <input type="text" id="inp" class="ml-2" placeholder="Enter Emp. Code"><br><br>
+        <button id="getRes" class="ml-2">Get Info</button>
+        <button id="clear" class="ml-2">Clear</button>
+        <div class="container rounded mt-4 pb-2 text-white" id="block">
+            <p class="h4">Employee Info</p>
+            <div class="row p-1 m-1">
+                <table class="table table-dark table-striped table-bordered table-hover">
+                    <thead class="thead-light">
+                        <tr>
+                            <th><center>Emp Id</center></th>
+                            <th><center>Employee Name</center></th>
+                            <th><center>Age</center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><center id="empId"></center></td>
+                            <td><center id="empName"></center></td>
+                            <td><center id="empAge"></center></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
